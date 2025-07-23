@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #d3d3d3;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 350px;
+            height: 600px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #2f2f2f;
+            color: #eee;
+            padding: 2rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 0.7rem;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
+            background: #444;
+            border: 1px solid #555;
+            border-radius: 6px;
+            color: #eee;
+        }
+
+        input:focus {
+            outline: none;
+            background: #555;
+            border-color: #777;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            background: #555;
+            border: none;
+            border-radius: 6px;
+            color: #eee;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #777;
+        }
+
+        .google-button {
+            background: #fff;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .google-button:hover {
+            background: #e0e0e0;
+        }
+
+        .google-icon {
+            font-family: 'Material Symbols Outlined',serif;
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        .toggle-link {
+            margin-top: 0.8rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .toggle-link a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .toggle-link a:hover {
+            color: #fff;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #ccc;
+            color: #000;
+            border: none;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            position: fixed;
+            top:2%;
+            left: 2%;
+        }
+
+        .btn-back:hover {
+            background-color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+<a th:href="@{/}" class="btn-back">← Back</a>
+<div class="flip-card" id="flipCard">
+    <div class="flip-card-inner">
+        <!-- Login Form -->
+        <div class="card-front">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <label>Username</label>
+                <label>
+                    <input type="text" name="username" placeholder="Username" required>
+                </label>
+
+                <label>Password</label>
+                <label>
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+                <button type="submit">Sign In</button>
+
+                <button type="button" class="google-button">
+                    <span class="google-icon">login</span>
+                    Sign in with Google
+                </button>
+
+                <div class="toggle-link">
+                    Don't have an account? <a href="#" onclick="flipCard()">Register</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div class="card-back">
+            <h2>Register</h2>
+            <form action="/register" method="post">
+                <label >Username</label>
+                <label>
+                    <input type="text" name="username" required />
+                </label>
+
+                <label>Date of Birth</label>
+                <label>
+                    <input type="date" name="dob" required />
+                </label>
+
+                <label>Email</label>
+                <label>
+                    <input type="email" name="email" required />
+                </label>
+
+                <label>Password</label>
+                <label>
+                    <input type="password" name="password" required />
+                </label>
+
+                <label>Role</label>
+                <label>
+                    <select name="role" required>
+                        <option value="ROLE_USER">User</option>
+                        <option value="ROLE_ADMIN">Admin</option>
+                    </select>
+                </label>
+
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <button type="submit">Register</button>
+
+                <div class="toggle-link">
+                    Already have an account? <a href="#" onclick="flipCard()">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function flipCard() {
+        document.getElementById('flipCard').classList.toggle('flipped');
+    }
+</script>
+</body>
+</html>

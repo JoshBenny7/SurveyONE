@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health and Wellness Surveys</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .survey-card {
+      background-color: #2f2f2f;
+      color: #eee;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .survey-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .survey-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .survey-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    .survey-card a:hover {
+      text-decoration: underline;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: #ccc;
+      color: #000;
+      border: none;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      position: fixed;
+      top:2%;
+      left: 2%;
+    }
+
+    .btn-back:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Health, Fitness & Wellness Surveys</h1>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+</header>
+
+<div class="container">
+  <div class="survey-card">
+    <h3>Fitness and Physical Activity</h3>
+    <p>Share your workout routines, exercise preferences, and tips for staying active.</p>
+    <a th:href="@{/health/health1}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Nutrition and Diet Habits</h3>
+    <p>Tell us about your eating habits, food preferences, and challenges with nutrition.</p>
+    <a th:href="@{/health/health2}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Wellness and Self-Care</h3>
+    <p>How do you prioritize self-care and find balance in your daily life?</p>
+    <a th:href="@{/health/health3}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Mental Health and Stress Management</h3>
+    <p>Share your thoughts on coping with stress, mental health support, and resources you use.</p>
+    <a th:href="@{/health/health4}">Take Survey</a>
+  </div>
+</div>
+</body>
+</html>

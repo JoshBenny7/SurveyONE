@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autonomous Vehicles Trust Survey</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<header>
+    <h1>Public Trust in Autonomous Vehicles</h1>
+    <p>A survey on people's confidence in self-driving technology</p>
+    <!-- Back Button -->
+    <a th:href="@{/}" class="btn-back">← Back</a>
+    <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+    <form th:action="@{/submit-response}" method="post">
+        <input type="hidden" name="topic" value="Technology">
+        <input type="hidden" name="form_no" value="3">
+
+        <p><strong>1. I am familiar with the concept of autonomous vehicles.</strong></p>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1a" value="Strongly agree"><label class="form-check-label" for="q1a">Strongly agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1b" value="Agree"><label class="form-check-label" for="q1b">Agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1c" value="Neutral"><label class="form-check-label" for="q1c">Neutral</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1d" value="Disagree"><label class="form-check-label" for="q1d">Disagree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1e" value="Strongly disagree"><label class="form-check-label" for="q1e">Strongly disagree</label></div>
+
+        <br><br>
+
+        <p><strong>2. I would feel safe riding in a fully autonomous vehicle.</strong></p>
+        <!-- Use the same scale below -->
+        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2a" value="Strongly agree"><label class="form-check-label" for="q2a">Strongly agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2b" value="Agree"><label class="form-check-label" for="q2b">Agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2c" value="Neutral"><label class="form-check-label" for="q2c">Neutral</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2d" value="Disagree"><label class="form-check-label" for="q2d">Disagree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2e" value="Strongly disagree"><label class="form-check-label" for="q2e">Strongly disagree</label></div>
+
+        <br><br>
+
+        <p><strong>3. I am concerned about safety risks associated with autonomous vehicles.</strong></p>
+        <!-- Likert scale again -->
+        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3a" value="Strongly agree"><label class="form-check-label" for="q3a">Strongly agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3b" value="Agree"><label class="form-check-label" for="q3b">Agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3c" value="Neutral"><label class="form-check-label" for="q3c">Neutral</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3d" value="Disagree"><label class="form-check-label" for="q3d">Disagree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3e" value="Strongly disagree"><label class="form-check-label" for="q3e">Strongly disagree</label></div>
+
+        <br><br>
+
+        <p><strong>4. I would trust an autonomous vehicle more in highway conditions than urban areas.</strong></p>
+        <!-- Likert scale again -->
+        <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4a" value="Strongly agree"><label class="form-check-label" for="q4a">Strongly agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4b" value="Agree"><label class="form-check-label" for="q4b">Agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4c" value="Neutral"><label class="form-check-label" for="q4c">Neutral</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4d" value="Disagree"><label class="form-check-label" for="q4d">Disagree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4e" value="Strongly disagree"><label class="form-check-label" for="q4e">Strongly disagree</label></div>
+
+        <br><br>
+
+        <p><strong>5. Autonomous vehicles will become common on roads in the next 10 years.</strong></p>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5a" value="Strongly agree"><label class="form-check-label" for="q5a">Strongly agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5b" value="Agree"><label class="form-check-label" for="q5b">Agree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5c" value="Neutral"><label class="form-check-label" for="q5c">Neutral</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5d" value="Disagree"><label class="form-check-label" for="q5d">Disagree</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5e" value="Strongly disagree"><label class="form-check-label" for="q5e">Strongly disagree</label></div>
+
+        <br><br>
+
+
+        <!-- Submit -->
+        <button type="submit">Submit Survey</button>
+    </form>
+
+</section>
+
+<footer>
+    &copy; 2025 AI Perception Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

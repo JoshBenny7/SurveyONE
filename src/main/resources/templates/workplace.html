@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workplace Surveys</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .survey-card {
+            background-color: #2f2f2f;
+            color: #eee;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .survey-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .survey-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .survey-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        .survey-card a:hover {
+            text-decoration: underline;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #ccc;
+            color: #000;
+            border: none;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            position: fixed;
+            top:2%;
+            left: 2%;
+        }
+
+        .btn-back:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Workplace - Surveys</h1>
+    <a th:href="@{/}" class="btn-back">← Back</a>
+</header>
+
+<div class="container">
+    <div class="survey-card">
+        <h3>Workplace Culture and Inclusion</h3>
+        <p>Share your thoughts on inclusivity, diversity, and the overall culture in your workplace.</p>
+        <a th:href="@{/workplace/work1}">Take Survey</a>
+    </div>
+
+    <div class="survey-card">
+        <h3>Boosting Productivity and Wellbeing</h3>
+        <p>What are your insights on maintaining high productivity without compromising mental health?</p>
+        <a th:href="@{/workplace/work2}">Take Survey</a>
+    </div>
+
+    <div class="survey-card">
+        <h3>Remote Work Challenges and Benefits</h3>
+        <p>We want to hear how remote work has affected your daily life, productivity, and work-life balance.</p>
+        <a th:href="@{/workplace/work3}">Take Survey</a>
+    </div>
+
+    <div class="survey-card">
+        <h3>Feedback on Hybrid Work Models</h3>
+        <p>Share your experience and preferences about working in a hybrid environment.</p>
+        <a th:href="@{/workplace/work4}">Take Survey</a>
+    </div>
+</div>
+</body>
+</html>

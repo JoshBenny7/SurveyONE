@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gender Equality in the Workplace Survey</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<header>
+  <h1>Gender Equality in the Workplace</h1>
+  <p>Share your thoughts on gender-based disparities and equality in your workplace.</p>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+  <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+  <form th:action="@{/submit-response}" method="post">
+    <input type="hidden" name="topic" value="Society">
+    <input type="hidden" name="form_no" value="17">
+
+    <label>1. Do you feel men and women have equal opportunities in your workplace?</label>
+    <div class="form-check"><input type="radio" name="q1" id="q1a" value="Strongly Agree"><label for="q1a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1b" value="Agree"><label for="q1b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1c" value="Neutral"><label for="q1c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1d" value="Disagree"><label for="q1d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1e" value="Strongly Disagree"><label for="q1e">Strongly Disagree</label></div>
+
+    <label>2. Do you feel comfortable reporting gender-based discrimination?</label>
+    <div class="form-check"><input type="radio" name="q2" id="q2a" value="Strongly Agree"><label for="q2a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2b" value="Agree"><label for="q2b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2c" value="Neutral"><label for="q2c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2d" value="Disagree"><label for="q2d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2e" value="Strongly Disagree"><label for="q2e">Strongly Disagree</label></div>
+
+    <label>3. I believe there are gender-based pay gaps in my organization.</label>
+    <div class="form-check"><input type="radio" name="q3" id="q3a" value="Strongly Agree"><label for="q3a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3b" value="Agree"><label for="q3b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3c" value="Neutral"><label for="q3c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3d" value="Disagree"><label for="q3d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3e" value="Strongly Disagree"><label for="q3e">Strongly Disagree</label></div>
+
+    <label>4. My workplace provides training programs that promote gender diversity.</label>
+    <div class="form-check"><input type="radio" name="q4" id="q4a" value="Strongly Agree"><label for="q4a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4b" value="Agree"><label for="q4b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4c" value="Neutral"><label for="q4c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4d" value="Disagree"><label for="q4d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4e" value="Strongly Disagree"><label for="q4e">Strongly Disagree</label></div>
+
+    <label>5. Do you believe gender equality is a priority in your workplace?</label>
+    <div class="form-check"><input type="radio" name="q5" id="q5a" value="Strongly Agree"><label for="q5a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5b" value="Agree"><label for="q5b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5c" value="Neutral"><label for="q5c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5d" value="Disagree"><label for="q5d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5e" value="Strongly Disagree"><label for="q5e">Strongly Disagree</label></div>
+
+    <button type="submit">Submit Survey</button>
+  </form>
+
+</section>
+
+<footer>
+  &copy; 2025 Gender Equality Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

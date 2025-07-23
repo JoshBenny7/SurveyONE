@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy in Mobile Apps survey</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<header>
+  <h1>Privacy in Mobile Apps Survey</h1>
+  <p>How do users feel about app permissions and data tracking?</p>
+  <a th:href="@{/}"  class="btn-back">← Back</a>
+  <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+  <h2>Student Perception Survey</h2>
+
+  <form th:action="@{/submit-response}" method="post">
+    <input type="hidden" name="topic" value="Technology">
+    <input type="hidden" name="form_no" value="4">
+
+    <!-- Question 1 -->
+    <label>1. I read the privacy policy before installing an app.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="Strongly Agree" id="q1a">
+      <label class="form-check-label" for="q1a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="Agree" id="q1b">
+      <label class="form-check-label" for="q1b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="Neutral" id="q1c">
+      <label class="form-check-label" for="q1c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="Disagree" id="q1d">
+      <label class="form-check-label" for="q1d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="Strongly Disagree" id="q1e">
+      <label class="form-check-label" for="q1e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 2 -->
+    <label>2. I am concerned about the type of data apps collect.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="Strongly Agree" id="q2a">
+      <label class="form-check-label" for="q2a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="Agree" id="q2b">
+      <label class="form-check-label" for="q2b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="Neutral" id="q2c">
+      <label class="form-check-label" for="q2c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="Disagree" id="q2d">
+      <label class="form-check-label" for="q2d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="Strongly Disagree" id="q2e">
+      <label class="form-check-label" for="q2e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 3 -->
+    <label>3. I have avoided installing apps due to privacy concerns.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="Strongly Agree" id="q3a">
+      <label class="form-check-label" for="q3a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="Agree" id="q3b">
+      <label class="form-check-label" for="q3b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="Neutral" id="q3c">
+      <label class="form-check-label" for="q3c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="Disagree" id="q3d">
+      <label class="form-check-label" for="q3d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="Strongly Disagree" id="q3e">
+      <label class="form-check-label" for="q3e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 4 -->
+    <label>4. Mobile apps collect more data than necessary.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="Strongly Agree" id="q4a">
+      <label class="form-check-label" for="q4a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="Agree" id="q4b">
+      <label class="form-check-label" for="q4b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="Neutral" id="q4c">
+      <label class="form-check-label" for="q4c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="Disagree" id="q4d">
+      <label class="form-check-label" for="q4d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="Strongly Disagree" id="q4e">
+      <label class="form-check-label" for="q4e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 5 -->
+    <label>5. I am confident that my data is secure once shared with apps.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="Strongly Agree" id="q5a">
+      <label class="form-check-label" for="q5a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="Agree" id="q5b">
+      <label class="form-check-label" for="q5b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="Neutral" id="q5c">
+      <label class="form-check-label" for="q5c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="Disagree" id="q5d">
+      <label class="form-check-label" for="q5d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="Strongly Disagree" id="q5e">
+      <label class="form-check-label" for="q5e">Strongly Disagree</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Submit Survey</button>
+  </form>
+
+</section>
+
+<footer>
+  &copy; 2025 AI Perception Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

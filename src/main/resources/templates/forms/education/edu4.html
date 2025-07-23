@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exams and Testing Strategies</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+<header>
+    <h1>Exams and Testing Strategies Survey</h1>
+    <a th:href="@{/}" class="btn-back">← Back</a>
+    <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+    <form th:action="@{/submit-response}" method="post">
+        <input type="hidden" name="topic" value="education">
+        <input type="hidden" name="form_no" value="12">
+
+        <!-- Question 1 -->
+        <label>1. I revise regularly to prepare for exams.</label>
+        <div class="form-check"><input type="radio" name="q1" value="Strongly Agree" id="q1a"><label for="q1a">Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Agree" id="q1b"><label for="q1b">Agree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Neutral" id="q1c"><label for="q1c">Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Disagree" id="q1d"><label for="q1d">Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Strongly Disagree" id="q1e"><label for="q1e">Strongly Disagree</label></div>
+
+        <!-- Question 2 -->
+        <label>2. I prefer exams with multiple-choice questions (MCQs) over written formats.</label>
+        <div class="form-check"><input type="radio" name="q2" value="Strongly Agree" id="q2a"><label for="q2a">Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Agree" id="q2b"><label for="q2b">Agree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Neutral" id="q2c"><label for="q2c">Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Disagree" id="q2d"><label for="q2d">Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Strongly Disagree" id="q2e"><label for="q2e">Strongly Disagree</label></div>
+
+        <!-- Question 3 -->
+        <label>3. Time management is a major challenge for me during exams.</label>
+        <div class="form-check"><input type="radio" name="q3" value="Strongly Agree" id="q3a"><label for="q3a">Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Agree" id="q3b"><label for="q3b">Agree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Neutral" id="q3c"><label for="q3c">Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Disagree" id="q3d"><label for="q3d">Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Strongly Disagree" id="q3e"><label for="q3e">Strongly Disagree</label></div>
+
+        <!-- Question 4 -->
+        <label>4. I feel confident when taking exams.</label>
+        <div class="form-check"><input type="radio" name="q4" value="Strongly Agree" id="q4a"><label for="q4a">Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Agree" id="q4b"><label for="q4b">Agree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Neutral" id="q4c"><label for="q4c">Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Disagree" id="q4d"><label for="q4d">Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Strongly Disagree" id="q4e"><label for="q4e">Strongly Disagree</label></div>
+
+        <!-- Question 5 -->
+        <label>5. I prefer studying alone rather than in a group.</label>
+        <div class="form-check"><input type="radio" name="q5" value="Strongly Agree" id="q5a"><label for="q5a">Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Agree" id="q5b"><label for="q5b">Agree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Neutral" id="q5c"><label for="q5c">Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Disagree" id="q5d"><label for="q5d">Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Strongly Disagree" id="q5e"><label for="q5e">Strongly Disagree</label></div>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Exams Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

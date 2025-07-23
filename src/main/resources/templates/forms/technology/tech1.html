@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Learning Tools Survey</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<header>
+  <h1>AI in Education Survey</h1>
+  <p>Understanding how students perceive AI-powered learning tools</p>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+  <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<!-- ✅ Success Dialog Box -->
+<!--/*@thymesVar id="submitted" type=""*/-->
+<div th:if="${submitted}" id="submissionDialog" style="
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem 2rem;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+">
+  <span>Survey submitted successfully!</span>
+  <a th:href="@{/}" class="btn-continue" style="
+      background-color: #28a745;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+  ">Continue</a>
+</div>
+
+<script>
+  // Auto-hide the dialog after 5 seconds
+  setTimeout(function () {
+    let dialog = document.getElementById("submissionDialog");
+    if (dialog) {
+      dialog.style.display = "none";
+    }
+  }, 5000);
+</script>
+
+<section>
+  <h2>Student Perception Survey</h2>
+
+  <form th:action="@{/submit-response}" method="post">
+    <input type="hidden" name="topic" value="Technology">
+    <input type="hidden" name="form_no" value="1">
+
+    <!-- Question 1 -->
+    <label>1. AI-powered tools make learning more engaging.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1a" value="Strongly Agree">
+      <label class="form-check-label" for="q1a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1b" value="Agree">
+      <label class="form-check-label" for="q1b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1c" value="Neutral">
+      <label class="form-check-label" for="q1c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1d" value="Disagree">
+      <label class="form-check-label" for="q1d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1e" value="Strongly Disagree">
+      <label class="form-check-label" for="q1e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 2 -->
+    <label>2. AI helps personalize my learning experience.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2a" value="Strongly Agree">
+      <label class="form-check-label" for="q2a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2b" value="Agree">
+      <label class="form-check-label" for="q2b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2c" value="Neutral">
+      <label class="form-check-label" for="q2c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2d" value="Disagree">
+      <label class="form-check-label" for="q2d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2e" value="Strongly Disagree">
+      <label class="form-check-label" for="q2e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 3 -->
+    <label>3. I trust AI tools to provide accurate academic assistance.</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3a" value="Strongly Agree">
+      <label class="form-check-label" for="q3a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3b" value="Agree">
+      <label class="form-check-label" for="q3b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3c" value="Neutral">
+      <label class="form-check-label" for="q3c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3d" value="Disagree">
+      <label class="form-check-label" for="q3d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3e" value="Strongly Disagree">
+      <label class="form-check-label" for="q3e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 4 -->
+    <p><strong>4. AI-based feedback helps me improve my performance.</strong></p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" id="q4a" value="Strongly Agree">
+      <label class="form-check-label" for="q4a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" id="q4b" value="Agree">
+      <label class="form-check-label" for="q4b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" id="q4c" value="Neutral">
+      <label class="form-check-label" for="q4c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" id="q4d" value="Disagree">
+      <label class="form-check-label" for="q4d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" id="q4e" value="Strongly Disagree">
+      <label class="form-check-label" for="q4e">Strongly Disagree</label>
+    </div>
+
+    <!-- Question 5 -->
+    <p><strong>5. I am concerned about data privacy when using AI educational tools.</strong></p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" id="q5a" value="Strongly Agree">
+      <label class="form-check-label" for="q5a">Strongly Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" id="q5b" value="Agree">
+      <label class="form-check-label" for="q5b">Agree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" id="q5c" value="Neutral">
+      <label class="form-check-label" for="q5c">Neutral</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" id="q5d" value="Disagree">
+      <label class="form-check-label" for="q5d">Disagree</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" id="q5e" value="Strongly Disagree">
+      <label class="form-check-label" for="q5e">Strongly Disagree</label>
+    </div>
+
+        <!-- Submit Button -->
+    <button type="submit">Submit Survey</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 AI Perception Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

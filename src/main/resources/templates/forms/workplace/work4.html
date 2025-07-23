@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boosting Productivity and Wellbeing Survey</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+  <h1>Feedback on Hybrid Work Models Survey</h1>
+  <p>Share your experience and preferences about working in a hybrid environment.</p>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+  <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+
+<section>
+  <form th:action="@{/submit-response}" method="post">
+    <input type="hidden" name="topic" value="Workplace">
+    <input type="hidden" name="form_no" value="16">
+
+    <label>1. I am satisfied with my hybrid work schedule.</label>
+    <div class="form-check"><input type="radio" name="q1" value="Strongly Agree"><label>Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" value="Agree"><label>Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" value="Neutral"><label>Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q1" value="Disagree"><label>Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q1" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+    <label>2. Hybrid work gives me greater flexibility in managing my tasks.</label>
+    <div class="form-check"><input type="radio" name="q2" value="Strongly Agree"><label>Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" value="Agree"><label>Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" value="Neutral"><label>Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q2" value="Disagree"><label>Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q2" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+    <label>3. I face challenges in coordination and collaboration in a hybrid setup.</label>
+    <div class="form-check"><input type="radio" name="q3" value="Strongly Agree"><label>Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" value="Agree"><label>Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" value="Neutral"><label>Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q3" value="Disagree"><label>Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q3" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+    <label>4. I feel comfortable working in a hybrid work environment.</label>
+    <div class="form-check"><input type="radio" name="q4" value="Strongly Agree"><label>Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" value="Agree"><label>Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" value="Neutral"><label>Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q4" value="Disagree"><label>Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q4" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+    <label>5. I want to continue with the hybrid work model in the future.</label>
+    <div class="form-check"><input type="radio" name="q5" value="Strongly Agree"><label>Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" value="Agree"><label>Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" value="Neutral"><label>Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q5" value="Disagree"><label>Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q5" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+    <button type="submit">Submit Survey</button>
+  </form>
+
+  </form>
+</section>

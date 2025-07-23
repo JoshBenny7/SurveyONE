@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workplace Culture and Inclusion Survey</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+<header>
+    <h1>Workplace Culture and Inclusion Survey</h1>
+    <p>Share your thoughts on inclusivity, diversity, and the overall culture in your workplace.</p>
+    <a th:href="@{/}" class="btn-back">← Back</a>
+    <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+    <form th:action="@{/submit-response}" method="post">
+        <input type="hidden" name="topic" value="Workplace">
+        <input type="hidden" name="form_no" value="13">
+
+        <label>1. My workplace is inclusive.</label>
+        <div class="form-check"><input type="radio" name="q1" value="Strongly Agree"><label>Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Agree"><label>Agree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Neutral"><label>Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Disagree"><label>Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q1" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+        <label>2. Diversity is well promoted at my workplace.</label>
+        <div class="form-check"><input type="radio" name="q2" value="Strongly Agree"><label>Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Agree"><label>Agree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Neutral"><label>Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Disagree"><label>Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q2" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+        <label>3. My workplace culture is inclusive and supportive.</label>
+        <div class="form-check"><input type="radio" name="q3" value="Strongly Agree"><label>Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Agree"><label>Agree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Neutral"><label>Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Disagree"><label>Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q3" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+        <label>4. Management supports inclusivity efforts.</label>
+        <div class="form-check"><input type="radio" name="q4" value="Strongly Agree"><label>Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Agree"><label>Agree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Neutral"><label>Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Disagree"><label>Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q4" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+        <label>5. I feel comfortable sharing my ideas at work.</label>
+        <div class="form-check"><input type="radio" name="q5" value="Strongly Agree"><label>Strongly Agree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Agree"><label>Agree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Neutral"><label>Neutral</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Disagree"><label>Disagree</label></div>
+        <div class="form-check"><input type="radio" name="q5" value="Strongly Disagree"><label>Strongly Disagree</label></div>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+
+</section>
+
+<footer>
+    &copy; 2025 Workplace Survey. All rights reserved.
+</footer>
+
+</body>
+</html>

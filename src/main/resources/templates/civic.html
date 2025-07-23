@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Civic Interest Surveys</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .survey-card {
+      background-color: #2f2f2f;
+      color: #eee;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .survey-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .survey-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .survey-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    .survey-card a:hover {
+      text-decoration: underline;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: #ccc;
+      color: #000;
+      border: none;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      position: fixed;
+      top:2%;
+      left: 2%;
+    }
+
+    .btn-back:hover {
+      background-color: #bbb;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <h1>Civic Interest - Surveys</h1>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+</header>
+
+<div class="container">
+  <div class="survey-card">
+    <h3>Local Government Transparency</h3>
+    <p>What do you think about the transparency and accountability of your local government?</p>
+    <a th:href="@{/civic/civic1}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Environmental Conservation Efforts</h3>
+    <p>How can we better protect our natural resources and fight climate change?</p>
+    <a th:href="@{/civic/civic2}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Public Transportation and Accessibility</h3>
+    <p>Share your opinion on the current state of public transit and its inclusivity.</p>
+    <a th:href="@{/civic/civic3}">Take Survey</a>
+  </div>
+
+  <div class="survey-card">
+    <h3>Citizen Engagement in Policy Making</h3>
+    <p>How involved do you feel in decision-making processes and civic participation?</p>
+    <a th:href="@{/civic/civic4}">Take Survey</a>
+  </div>
+</div>
+</body>
+</html>

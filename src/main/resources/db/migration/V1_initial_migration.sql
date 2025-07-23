@@ -1,0 +1,32 @@
+CREATE TABLE Users
+(
+    id      BIGINT AUTO_INCREMENT NOT NULL,
+    username  VARCHAR(255) NOT NULL,
+    dob    DATE NOT NULL,
+    email  VARCHAR(255) NOT NULL UNIQUE ,
+    password   VARCHAR(255) NOT NULL,
+    role     VARCHAR(255) NOT NULL,;
+    CONSTRAINT `PRIMARY` PRIMARY KEY (id)
+);
+
+CREATE TABLE response
+(
+    id      BIGINT AUTO_INCREMENT NOT NULL,
+    topic  VARCHAR(255) NOT NULL,
+    form_no   int NOT NULL,
+    q1 VARCHAR(255) NOT NULL,
+    q2 VARCHAR(255) NOT NULL,
+    q3 VARCHAR(255) NOT NULL,
+    q4 VARCHAR(255) NOT NULL,
+    q5 VARCHAR(255) NOT NULL,
+    CONSTRAINT `PRIMARY` PRIMARY KEY (id)
+);
+
+CREATE TABLE topics
+(
+    id      BIGINT AUTO_INCREMENT NOT NULL,
+    topic  VARCHAR(255) NOT NULL,
+    description
+    no_of_forms int,
+    CONSTRAINT `PRIMARY` PRIMARY KEY (id)
+);

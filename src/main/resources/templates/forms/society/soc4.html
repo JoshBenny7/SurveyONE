@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homelessness and Housing Solutions Survey</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<header>
+  <h1>Homelessness and Housing Solutions</h1>
+  <p>Share your perspective on the causes and solutions for homelessness in your city.</p>
+  <a th:href="@{/}" class="btn-back">← Back</a>
+  <img th:src="@{/images/logo.png}" alt="Company Logo">
+</header>
+
+<section>
+  <form th:action="@{/submit-response}" method="post">
+    <input type="hidden" name="topic" value="Society">
+    <input type="hidden" name="form_no" value="20">
+
+    <!-- Q1: Rephrased for Likert scale -->
+    <label>1. High housing costs are a main cause of homelessness in my area.</label>
+    <div class="form-check"><input type="radio" name="q1" id="q1a" value="Strongly Agree"><label for="q1a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1b" value="Agree"><label for="q1b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1c" value="Neutral"><label for="q1c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1d" value="Disagree"><label for="q1d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q1" id="q1e" value="Strongly Disagree"><label for="q1e">Strongly Disagree</label></div>
+
+    <!-- Q2 -->
+    <label>2. Enough is being done to address homelessness in my city.</label>
+    <div class="form-check"><input type="radio" name="q2" id="q2a" value="Strongly Agree"><label for="q2a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2b" value="Agree"><label for="q2b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2c" value="Neutral"><label for="q2c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2d" value="Disagree"><label for="q2d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q2" id="q2e" value="Strongly Disagree"><label for="q2e">Strongly Disagree</label></div>
+
+    <!-- Q3: Rephrased for Likert -->
+    <label>3. Homeless shelters and services in my city are of high quality.</label>
+    <div class="form-check"><input type="radio" name="q3" id="q3a" value="Strongly Agree"><label for="q3a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3b" value="Agree"><label for="q3b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3c" value="Neutral"><label for="q3c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3d" value="Disagree"><label for="q3d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q3" id="q3e" value="Strongly Disagree"><label for="q3e">Strongly Disagree</label></div>
+
+    <!-- Q4: Rephrased for Likert scale -->
+    <label>4. Affordable housing is the most effective solution to homelessness.</label>
+    <div class="form-check"><input type="radio" name="q4" id="q4a" value="Strongly Agree"><label for="q4a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4b" value="Agree"><label for="q4b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4c" value="Neutral"><label for="q4c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4d" value="Disagree"><label for="q4d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q4" id="q4e" value="Strongly Disagree"><label for="q4e">Strongly Disagree</label></div>
+
+    <!-- Q5: Rephrased for Likert -->
+    <label>5. I support government funding to reduce homelessness.</label>
+    <div class="form-check"><input type="radio" name="q5" id="q5a" value="Strongly Agree"><label for="q5a">Strongly Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5b" value="Agree"><label for="q5b">Agree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5c" value="Neutral"><label for="q5c">Neutral</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5d" value="Disagree"><label for="q5d">Disagree</label></div>
+    <div class="form-check"><input type="radio" name="q5" id="q5e" value="Strongly Disagree"><label for="q5e">Strongly Disagree</label></div>
+
+    <button type="submit">Submit Survey</button>
+  </form>
+
+</section>
+
+<footer>
+  &copy; 2025 Homelessness and Housing Survey. All rights reserved.
+</footer>
+
+</body>
+</html>
